@@ -1,4 +1,6 @@
 //
+var rounds = prompt('How many rounds do you want to play?')
+
 play();
 function play(){
 let pointPlayer1 = 0 
@@ -21,10 +23,8 @@ function roll(){
   let dice1 = Math.floor(Math.random() * 6 + 1)
   console.log('you rolled a ' + dice1)
 }
-}
 
-play2();
-function play2(){
+
 
 
 question2();
@@ -46,8 +46,14 @@ function roll1(){
 }
 if (roll > roll1){
   console.log('player1 wins')
+  pointPlayer1 ++
+}
+if (roll1 < roll) {
+  console.log('player2 wins')
+  pointPlayer2 ++
 }
 else {
   console.log('It is a draw')
 }
 }
+
