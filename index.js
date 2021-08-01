@@ -6,10 +6,12 @@ var rounds = prompt('How many rounds do you want to play?')
 let round = 0 
 let pointPlayer1 = 0 
 let pointPlayer2 = 0 
+
 let dice1 = Math.floor(Math.random() * 6 + 1)
 let dice2 = Math.floor(Math.random() * 6 + 1)
 
 do {
+
 
 var play = prompt ('Player1 do you want to roll the dice')
 if (play == 'yes'){
@@ -24,9 +26,6 @@ else {
  var play = prompt ('Player1 do you want to roll the dice')
 }
 
-
-
-
 var play2 = prompt ('Player2 do you want to roll the dice')
 if (play2 == 'yes'){
  let dice2 = Math.floor(Math.random() * 6 + 1)
@@ -40,15 +39,15 @@ else {
   var play2 = prompt ('Player2 do you want to roll the dice')
 }
 
-if (dice1 < dice2){
+if (dice1 > dice2){
   console.log('player1 wins')
   pointPlayer1 ++
 }
-else if (dice2 < dice1) {
+else if (dice1 < dice2) {
   console.log('player2 wins')
   pointPlayer2 ++
 }
-else { 
+else if (dice1 = dice2){ 
   console.log('It is a draw')
 }
 round ++
